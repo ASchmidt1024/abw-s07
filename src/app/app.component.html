@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <ul>
+    <li *ngFor="let movie of movies">
+      <h2>
+        {{ movie.title }}
+      </h2>
+      <p>
+        <img 
+          width="240" 
+          height="360"
+          alt="Poster {{movie.title}}" 
+          src="{{imageSrc + movie.poster_path}}"
+        >
+      </p>
+      <app-movie-detail [movie]="movie"></app-movie-detail>
+    </li>
+  </ul>
+</div>
